@@ -1,4 +1,4 @@
-### Hair Expert System (Sistem Pakar Diagnosa Penyakit Rambut)
+## Hair Expert System (Sistem Pakar Diagnosa Penyakit Rambut)
 
 **Hair Expert System** adalah aplikasi sistem pakar berbasis pengetahuan yang dirancang untuk mendiagnosa penyakit rambut dan kulit kepala. 
 
