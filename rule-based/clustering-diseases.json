@@ -1,0 +1,76 @@
+{
+  "kemiripan_penyebab": {
+    "faktor_genetik": [
+      "Alopecia Areata",
+      "Androgenic Alopecia",
+      "Psoriasis",
+      "Temporal Triangular Alopecia"
+    ],
+    "penyakit_autoimun": [
+      "Alopecia Areata",
+      "Anagen Effluvium",
+      "Psoriasis"
+    ],
+    "dipicu_stres": [
+      "Alopecia Areata",
+      "Telogen Effluvium",
+      "Trikotilomania"
+    ],
+    "berkaitan_infeksi": [
+      "Anagen Effluvium",
+      "Folliculitis",
+      "Psoriasis",
+      "Telogen Effluvium"
+    ],
+    "disebabkan_obat": [
+      "Anagen Effluvium",
+      "Psoriasis",
+      "Telogen Effluvium"
+    ],
+    "faktor_hormonal": [
+      "Androgenic Alopecia",
+      "Telogen Effluvium"
+    ]
+  },
+
+  "kemiripan_gejala": {
+    "kerontokan_umum": [
+      "Alopecia Areata",
+      "Anagen Effluvium",
+      "Androgenic Alopecia",
+      "Folliculitis",
+      "Telogen Effluvium",
+      "Temporal Triangular Alopecia",
+      "Trikotilomania"
+    ],
+    "kerontokan_bercak_patch": [
+      "Alopecia Areata",
+      "Folliculitis",
+      "Temporal Triangular Alopecia",
+      "Trikotilomania"
+    ],
+    "kerontokan_cepat_mendadak": [
+      "Anagen Effluvium",
+      "Telogen Effluvium",
+      "Alopecia Areata"
+    ],
+    "gatal_pruritus": [
+      "Folliculitis",
+      "Pedikulosis Kapitis",
+      "Psoriasis",
+      "Seborrheic Dermatitis"
+    ],
+    "perubahan_kuku": [
+      "Alopecia Areata",
+      "Psoriasis"
+    ],
+    "ketombe_sisik_flaking": [
+      "Psoriasis",
+      "Seborrheic Dermatitis"
+    ],
+    "rambut_patah": [
+      "Anagen Effluvium",
+      "Trikotilomania"
+    ]
+  }
+}

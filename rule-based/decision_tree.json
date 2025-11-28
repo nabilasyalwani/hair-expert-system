@@ -1,0 +1,118 @@
+{
+  "id": "root",
+  "question": "Apa keluhan utama yang paling dirasakan?",
+  "options": [
+    {
+      "label": "Gatal, Kulit Kepala Merah, atau Bersisik/Ketombe",
+      "next_node": {
+        "id": "check_kutu",
+        "question": "Apakah terlihat adanya kutu atau telur kutu pada rambut?",
+        "options": [
+          {
+            "label": "Ya",
+            "result": "Pedikulosis Kapitis"
+          },
+          {
+            "label": "Tidak",
+            "next_node": {
+              "id": "check_bintik",
+              "question": "Apakah terdapat bintik merah kecil atau benjolan bernanah seperti jerawat?",
+              "options": [
+                {
+                  "label": "Ya",
+                  "result": "Folliculitis"
+                },
+                {
+                  "label": "Tidak",
+                  "next_node": {
+                    "id": "check_sisik",
+                    "question": "Bagaimana bentuk sisik atau ketombe yang muncul?",
+                    "options": [
+                      {
+                        "label": "Sisik tebal berwarna perak dengan dasar merah (plak)",
+                        "result": "Psoriasis"
+                      },
+                      {
+                        "label": "Sisik berminyak berwarna kekuningan",
+                        "result": "Seborrheic Dermatitis"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "label": "Rambut Rontok atau Kebotakan",
+      "next_node": {
+        "id": "check_pola_rontok",
+        "question": "Bagaimana pola kerontokannya?",
+        "options": [
+          {
+            "label": "Botak pada area tertentu (Bercak/Patchy)",
+            "next_node": {
+              "id": "check_segitiga",
+              "question": "Apakah kebotakan berbentuk segitiga di area pelipis dan sudah ada sejak kecil/lama?",
+              "options": [
+                {
+                  "label": "Ya",
+                  "result": "Temporal Triangular Alopecia"
+                },
+                {
+                  "label": "Tidak",
+                  "next_node": {
+                    "id": "check_cabut",
+                    "question": "Apakah rambut terlihat patah tidak rata atau ada kebiasaan menarik rambut?",
+                    "options": [
+                      {
+                        "label": "Ya",
+                        "result": "Trikotilomania"
+                      },
+                      {
+                        "label": "Tidak (Botak licin bulat/oval)",
+                        "result": "Alopecia Areata"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "label": "Rontok/Menipis secara merata (Diffuse)",
+            "next_node": {
+              "id": "check_kemo",
+              "question": "Apakah ada riwayat Kemoterapi, Radiasi, atau paparan racun baru-baru ini?",
+              "options": [
+                {
+                  "label": "Ya",
+                  "result": "Anagen Effluvium"
+                },
+                {
+                  "label": "Tidak",
+                  "next_node": {
+                    "id": "check_stres_akut",
+                    "question": "Apakah kerontokan terjadi mendadak (banyak sekali) sekitar 3-4 bulan setelah stres berat, sakit, atau melahirkan?",
+                    "options": [
+                      {
+                        "label": "Ya",
+                        "result": "Telogen Effluvium"
+                      },
+                      {
+                        "label": "Tidak (Menipis perlahan/bertahap)",
+                        "result": "Androgenic Alopecia"
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

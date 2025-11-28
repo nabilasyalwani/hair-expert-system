@@ -1,0 +1,24 @@
+{
+  "name": "Pedikulosis Kapitis",
+  "category": "iritasi",
+  "cause": [
+    "Ektoparasit/kutu kepala: Pediculus humanus var. capitis",
+    "Menempel pada kulit kepala dan menghisap darah",
+    "Penularan: kontak langsung atau penggunaan barang bersama (jilbab, topi, peci)"
+  ],
+  "symptoms": [
+    "Gatal akut pada kulit kepala",
+    "Iritasi dan sensasi digigit oleh kutu"
+  ],
+  "diagnosis": [
+    "Inspeksi visual kulit kepala dan rambut",
+    "Menemukan kutu dewasa, telur (nits), atau serpihan kutu",
+    "Diferensiasi dengan ketombe atau infeksi jamur"
+  ],
+  "treatment": [
+    "Farmakoterapi: lotion permethrin 1%",
+    "Non-farmakoterapi: sisir serit untuk mengangkat kutu dan telur saat rambut basah",
+    "Edukasi kebersihan pribadi dan lingkungan",
+    "Pisahkan alat pribadi untuk mencegah penularan"
+  ]
+}

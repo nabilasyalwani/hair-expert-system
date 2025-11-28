@@ -1,0 +1,29 @@
+{
+  "name": "Anagen Effluvium",
+  "category": "rontok",
+  "cause": [
+    "Infeksi yang mengganggu pertumbuhan rambut",
+    "Obat-obatan: kemoterapi (doksorubisin, nitrosourea, siklofosfamid), siklosporin",
+    "Toksin: talium, arsenik, emas, bismut",
+    "Radiasi pada kulit kepala",
+    "Penyakit autoimun (Alopecia Areata, pemfigus vulgaris) dan kondisi imunobulosa langka"
+  ],
+  "symptoms": [
+    "Kerontokan rambut cepat dan merata",
+    "Rambut patah di pangkal (fraktur batang rambut)",
+    "Non-sikatrik: tidak ada eritema, skuama, atau pigmentasi khas",
+    "Akar rambut panjang dan berpigmen dalam selubung akar"
+  ],
+  "diagnosis": [
+    "Pemeriksaan fisik: rambut patah dan berpigmen penuh",
+    "Tidak ada tanda alopesia sikatrik",
+    "Riwayat paparan kemoterapi, obat, atau radiasi",
+    "Perbedaan dengan telogen effluvium: rambut patah vs rambut rontok"
+  ],
+  "treatment": [
+    "Topikal minoxidil",
+    "Pendinginan kulit kepala (scalp cooling) selama kemoterapi",
+    "Cosmetic camouflage untuk alis dan rambut",
+    "Penghentian obat toksik atau pengelolaan penyakit autoimun penyebab"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Psoriasis",
+  "category": "ketombe",
+  "cause": [
+    "Genetik: predisposisi multifaktorial",
+    "Pemicu lingkungan: infeksi (Streptococcus), trauma fisik, merokok, alkohol",
+    "Obat-obatan: beta-blocker, lithium, obat lain yang memicu kondisi"
+  ],
+  "symptoms": [
+    "Plak salmon-pink dengan batas tegas dan sisik menempel longgar",
+    "Simetris di area trauma kulit (fenomena Koebner): siku, lutut, kulit kepala pada anak-anak (pityriasis amiantacea)",
+    "Variasi usia: remaja (guttate psoriasis), lansia (erythrodermic psoriasis)",
+    "Perubahan kuku: lekukan/pitting, kuku lepas dari dasar (onycholysis)",
+    "Ketombe membandel di kulit kepala",
+    "Kadang gatal (pruritus)"
+  ],
+  "diagnosis": [
+    "Observasi lesi khas dan lokasi simetris",
+    "Trichoscopy/histopatologi: plak inflamasi dan infiltrasi limfosit",
+    "Komorbiditas: psoriatic arthritis"
+  ],
+  "treatment": [
+    "Edukasi & gaya hidup: kurangi alkohol, berhenti merokok, perbaiki diet",
+    "Topikal: pelembap (urea/asam salisilat), kortikosteroid, calcipotriol, tar, dithranol",
+    "Fototerapi: narrowband UVB",
+    "Obat sistemik: methotrexate, acitretin, cyclosporin, obat baru (apremilast, deucravacitinib)",
+    "Biologis: anti-TNF, anti-IL-17, anti-IL-23, anti-IL-12/23 untuk kasus berat"
+  ]
+}

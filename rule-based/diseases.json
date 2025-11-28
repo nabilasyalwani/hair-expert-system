@@ -1,0 +1,225 @@
+[
+    {
+        "name": "Alopecia Areata",
+        "causes": [
+            "Genetik",
+            "Epigenetik (perubahan metilasi DNA dan asetilasi histon)",
+            "Stres psikologis → peningkatan kortisol → inflamasi",
+            "Faktor diet / pola makan memengaruhi sistem imun (misal minyak kedelai tinggi)",
+            "Penyakit autoimun kompleks"
+        ],
+        "symptoms": [
+            "Kerontokan rambut patch dengan batas tegas",
+            "Rambut tanda seru (exclamation point hairs) di tepi area rontok",
+            "Rambut distrofik dan yellow dots terlihat pada trichoscopy",
+            "Kelainan kuku: pitting, rapuh, garis halus",
+            "Pria: gejala awal terlihat di area janggut"
+        ],
+        "treatment": [
+            "Intralesional corticosteroid (ILC): triamcinolone acetonide (5 mg/mL kulit kepala, 2.5 mg/mL wajah/alas)",
+            "Hentikan terapi jika tidak ada perbaikan dalam 6 bulan",
+            "Alternatif: topikal corticosteroid, minoxidil",
+            "Manajemen stres dan gaya hidup sehat (diet seimbang)",
+            "Pantau respons dan konsultasi ke dokter kulit sesuai kondisi pasien"
+        ]
+    },
+    {
+        "name": "Anagen Effluvium",
+        "causes": [
+            "Infeksi yang mengganggu pertumbuhan rambut",
+            "Obat-obatan: kemoterapi (doksorubisin, nitrosourea, siklofosfamid), siklosporin",
+            "Toksin: talium, arsenik, emas, bismut",
+            "Radiasi pada kulit kepala",
+            "Penyakit autoimun (Alopecia Areata, pemfigus vulgaris) dan kondisi imunobulosa langka"
+        ],
+        "symptoms": [
+            "Kerontokan rambut cepat dan merata",
+            "Rambut patah di pangkal (fraktur batang rambut)",
+            "Non-sikatrik: tidak ada eritema, skuama, atau pigmentasi khas",
+            "Akar rambut panjang dan berpigmen dalam selubung akar"
+        ],
+        "treatment": [
+            "Topikal minoxidil",
+            "Pendinginan kulit kepala (scalp cooling) selama kemoterapi",
+            "Cosmetic camouflage untuk alis dan rambut",
+            "Penghentian obat toksik atau pengelolaan penyakit autoimun penyebab"
+        ]
+    },
+    {
+        "name": "Androgenic Alopecia",
+        "causes": [
+            "Sensitivitas folikel terhadap DHT",
+            "Faktor genetik / riwayat keluarga",
+            "Perubahan siklus rambut: anagen memendek, telogen memanjang",
+            "Faktor pendukung: merokok, sindrom metabolik",
+            "Hormon: peningkatan sensitivitas DHT"
+        ],
+        "symptoms": [
+            "Kerontokan progresif",
+            "Miniaturisasi rambut (pendek, tipis, kurang pigmen)",
+            "Pria: garis rambut mundur, penipisan vertex, kebotakan meluas",
+            "Wanita: pola Christmas tree, penipisan frontoparietal tanpa mundurnya garis rambut frontal",
+            "Kadang disertai gatal atau nyeri kulit kepala"
+        ],
+        "treatment": [
+            "Finasteride 1 mg",
+            "Minoxidil 2-5%",
+            "LLLT (low level laser therapy)",
+            "PRP therapy",
+            "Terapi tambahan: LLLT/PRP untuk memicu pertumbuhan rambut (efektivitas bervariasi)"
+        ]
+    },
+    {
+        "name": "Folliculitis",
+        "causes": [
+            "Sering bercukur atau waxing",
+            "Folikel tersumbat akibat produk riasan atau keringat",
+            "Kontak tangan kotor",
+            "Infeksi bakteri pada folikel rambut",
+            "Cedera pada folikel rambut",
+            "Penggunaan pakaian / bahan yang mengiritasi kulit"
+        ],
+        "symptoms": [
+            "Rambut rontok di area terkena",
+            "Bintik merah kecil seperti jerawat",
+            "Benjolan berisi nanah yang membesar atau pecah",
+            "Gatal, nyeri, panas, atau perih pada area terkena"
+        ],
+        "treatment": [
+            "Hindari bercukur berlebihan",
+            "Cuci area dengan sabun antibakteri dan air hangat",
+            "Jangan menggaruk atau menyentuh area dengan tangan kotor",
+            "Gunakan krim antibiotik atau topikal",
+            "Kompres dengan air garam bersih",
+            "Obat antijamur jika penyebab jamur",
+            "Konsultasi dokter jika tidak membaik"
+        ]
+    },
+    {
+        "name": "Pedikulosis Kapitis",
+        "causes": [
+            "Ektoparasit/kutu kepala: Pediculus humanus var. capitis",
+            "Menempel pada kulit kepala dan menghisap darah",
+            "Penularan: kontak langsung atau penggunaan barang bersama (jilbab, topi, peci)"
+        ],
+        "symptoms": [
+            "Gatal akut pada kulit kepala",
+            "Iritasi dan sensasi digigit oleh kutu"
+        ],
+        "treatment": [
+            "Farmakoterapi: lotion permethrin 1%",
+            "Non-farmakoterapi: sisir serit untuk mengangkat kutu dan telur saat rambut basah",
+            "Edukasi kebersihan pribadi dan lingkungan",
+            "Pisahkan alat pribadi untuk mencegah penularan"
+        ]
+    },
+    {
+        "name": "Psoriasis",
+        "causes": [
+            "Genetik: predisposisi multifaktorial",
+            "Pemicu lingkungan: infeksi (Streptococcus), trauma fisik, merokok, alkohol",
+            "Obat-obatan: beta-blocker, lithium, obat lain yang memicu kondisi"
+        ],
+        "symptoms": [
+            "Plak salmon-pink dengan batas tegas dan sisik menempel longgar",
+            "Simetris di area trauma kulit (fenomena Koebner): siku, lutut, kulit kepala pada anak-anak (pityriasis amiantacea)",
+            "Variasi usia: remaja (guttate psoriasis), lansia (erythrodermic psoriasis)",
+            "Perubahan kuku: lekukan/pitting, kuku lepas dari dasar (onycholysis)",
+            "Ketombe membandel di kulit kepala",
+            "Kadang gatal (pruritus)"
+        ],
+        "treatment": [
+            "Edukasi & gaya hidup: kurangi alkohol, berhenti merokok, perbaiki diet",
+            "Topikal: pelembap (urea/asam salisilat), kortikosteroid, calcipotriol, tar, dithranol",
+            "Fototerapi: narrowband UVB",
+            "Obat sistemik: methotrexate, acitretin, cyclosporin, obat baru (apremilast, deucravacitinib)",
+            "Biologis: anti-TNF, anti-IL-17, anti-IL-23, anti-IL-12/23 untuk kasus berat"
+        ]
+    },
+    {
+        "name": "Seborrheic Dermatitis",
+        "causes": [
+            "Jamur Malassezia sp. (M. globosa, M. restricta)",
+            "Infeksi kulit berminyak, mengganggu fungsi epidermis"
+        ],
+        "symptoms": [
+            "Kulit mengelupas / ketombe di kulit kepala, rambut, alis, janggut, kumis",
+            "Bercak berminyak dengan sisik atau kerak putih kekuningan",
+            "Ruam annular atau petaloid",
+            "Gatal (pruritus)",
+            "Warna ruam bervariasi tergantung warna kulit"
+        ],
+        "treatment": [
+            "Topikal: ketokonazol, ciclopirox, kortikosteroid, inhibitor kalsineurin",
+            "Oral: itrakonazol, terbinafin pada kasus berat/resisten",
+            "Non-farmakologis: membersihkan lesi dengan sisir, kompres air hangat"
+        ]
+    },
+    {
+        "name": "Telogen Effluvium",
+        "causes": [
+            "Stres berat",
+            "Infeksi atau demam tinggi",
+            "Operasi besar atau cedera parah",
+            "Perubahan hormon: hamil, melahirkan, hipotiroid",
+            "Obat-obatan: tiroid, antikonvulsan (carbamazepine, propylthiouracil)",
+            "Diet ketat atau anoreksia",
+            "Gangguan endokrin dan penyakit kronis (kanker, lupus, gagal ginjal/liver)"
+        ],
+        "symptoms": [
+            "Kerontokan rambut difus / merata, bukan patch",
+            "Rambut rontok banyak (~300 helai/hari)",
+            "Rambut kering dan menipis pada fase kronis (>6 bulan)",
+            "Kulit kepala normal: tidak gatal, ruam, panas, atau ketombe"
+        ],
+        "treatment": [
+            "Atasi pemicu utama (misal sesuaikan obat, obati infeksi, perbaiki hormon)",
+            "Minoxidil topikal untuk merangsang pertumbuhan rambut",
+            "Suplemen vitamin dan mineral jika defisiensi gizi",
+            "Perlakuan lembut pada rambut: hindari menyisir kuat, alat panas, catok, bahan kimia",
+            "Gaya hidup sehat: diet seimbang, olahraga, istirahat cukup, manajemen stres (relaksasi, meditasi, yoga)"
+        ]
+    },
+    {
+        "name": "Temporal Triangular Alopecia",
+        "causes": [
+            "Genetik: paradominant pattern atau mosaic genetic component",
+            "Kaitan dengan sindrom bawaan: Down syndrome, malformasi Dandy–Walker",
+            "Waktu muncul: sejak lahir (congenital) atau usia 2–9 tahun"
+        ],
+        "symptoms": [
+            "Area kebotakan segitiga di frontotemporal",
+            "Hanya satu patch, unilateral, menetap",
+            "Tidak melebar (non-progressive)",
+            "Non-scarring (tidak ada jaringan parut)",
+            "Tidak responsif terhadap pengobatan"
+        ],
+        "treatment": [
+            "Tidak ada pengobatan farmakologis efektif",
+            "Opsi bedah: eksisi atau transplantasi rambut",
+            "Topikal/eksperimental: minoxidil 5% (hasil sementara)",
+            "PRP therapy (hasil sementara)"
+        ]
+    },
+    {
+        "name": "Trikotilomania",
+        "causes": [
+            "Gangguan kontrol impuls: neurobiologis, psikologis, genetik",
+            "Pemicu: stres, kecemasan, trauma psikologis",
+            "Komorbiditas: OCD, depresi, gangguan kecemasan"
+        ],
+        "symptoms": [
+            "Rambut rontok tidak rata, area botak tidak merata",
+            "Rambut patah dengan panjang berbeda (mencabut manual)",
+            "Pola kerontokan tidak berbatas tegas (beda dengan AA)",
+            "Kadang coexist dengan androgenic alopecia"
+        ],
+        "treatment": [
+            "Terapi kognitif-perilaku (CBT) untuk mengubah kebiasaan mencabut",
+            "Terapi farmakologis: SSRI",
+            "Manajemen stres",
+            "Dukungan psikososial",
+            "Pendekatan terapi personal sesuai keparahan dan kebutuhan pasien"
+        ]
+    }
+]

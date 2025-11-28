@@ -1,0 +1,32 @@
+{
+  "name": "Telogen Effluvium",
+  "category": "rontok",
+  "cause": [
+    "Stres berat",
+    "Infeksi atau demam tinggi",
+    "Operasi besar atau cedera parah",
+    "Perubahan hormon: hamil, melahirkan, hipotiroid",
+    "Obat-obatan: tiroid, antikonvulsan (carbamazepine, propylthiouracil)",
+    "Diet ketat atau anoreksia",
+    "Gangguan endokrin dan penyakit kronis (kanker, lupus, gagal ginjal/liver)"
+  ],
+  "symptoms": [
+    "Kerontokan rambut difus / merata, bukan patch",
+    "Rambut rontok banyak (~300 helai/hari)",
+    "Rambut kering dan menipis pada fase kronis (>6 bulan)",
+    "Kulit kepala normal: tidak gatal, ruam, panas, atau ketombe"
+  ],
+  "diagnosis": [
+    "Trichoscopy: rambut rontok difus, tidak ada exclamation hairs/yellow dots",
+    "Biopsi: folikel dalam fase telogen, rambut telogen bentuk tongkat/bulat",
+    "Evaluasi riwayat medis dan pemicu",
+    "Diferensiasi: alopecia areata (patchy), psoriasis (ruam/kemerahan)"
+  ],
+  "treatment": [
+    "Atasi pemicu utama (misal sesuaikan obat, obati infeksi, perbaiki hormon)",
+    "Minoxidil topikal untuk merangsang pertumbuhan rambut",
+    "Suplemen vitamin dan mineral jika defisiensi gizi",
+    "Perlakuan lembut pada rambut: hindari menyisir kuat, alat panas, catok, bahan kimia",
+    "Gaya hidup sehat: diet seimbang, olahraga, istirahat cukup, manajemen stres (relaksasi, meditasi, yoga)"
+  ]
+}

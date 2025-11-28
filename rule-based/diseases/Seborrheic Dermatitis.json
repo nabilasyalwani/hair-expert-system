@@ -1,0 +1,24 @@
+{
+  "name": "Seborrheic Dermatitis",
+  "category": "berminyak, ketombe",
+  "cause": [
+    "Jamur Malassezia sp. (M. globosa, M. restricta)",
+    "Infeksi kulit berminyak, mengganggu fungsi epidermis"
+  ],
+  "symptoms": [
+    "Kulit mengelupas / ketombe di kulit kepala, rambut, alis, janggut, kumis",
+    "Bercak berminyak dengan sisik atau kerak putih kekuningan",
+    "Ruam annular atau petaloid",
+    "Gatal (pruritus)",
+    "Warna ruam bervariasi tergantung warna kulit"
+  ],
+  "diagnosis": [
+    "Observasi gejala klinis: flakiness, bercak berminyak, ruam annular",
+    "Pemeriksaan mikroskopis atau biopsi untuk Malassezia"
+  ],
+  "treatment": [
+    "Topikal: ketokonazol, ciclopirox, kortikosteroid, inhibitor kalsineurin",
+    "Oral: itrakonazol, terbinafin pada kasus berat/resisten",
+    "Non-farmakologis: membersihkan lesi dengan sisir, kompres air hangat"
+  ]
+}
