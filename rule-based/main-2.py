@@ -1,91 +1,119 @@
 import json
+import time
+import sys
 
-# 1. LOAD DATA
-def load_data():
+def load_json(filename):
     try:
-        with open('diseases.json', 'r') as f:
-            diseases_data = json.load(f)
-        with open('decision_tree.json', 'r') as f:
-            tree_data = json.load(f)
-        return diseases_data, tree_data
+        with open(filename, 'r', encoding='utf-8') as f:
+            return json.load(f)
     except FileNotFoundError:
-        print("Error: File JSON tidak ditemukan.")
-        exit()
+        print(f"Error: File '{filename}' tidak ditemukan.")
+        sys.exit()
+    except json.JSONDecodeError:
+        print(f"Error: Format file '{filename}' salah.")
+        sys.exit()
 
-# 2. LOGIKA TRAVERSE 
-def traverse_tree(node, history=None):
-    if history is None:
-        history = []
+def print_slow(text, delay=0.01):
+    for char in text:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(delay)
+    print()
+
+def ask_question(node_data):
+    """Menampilkan pertanyaan berdasarkan data node dari JSON"""
+    print("\n" + "="*50)
     
-    current_step = {"question": node['question'], "answer": ""}
+    if "image_desc" in node_data:
+        print(f"[GAMBAR: {node_data['image_desc']}]")
+        print("-" * 50)
     
-    print(f"\n[TANYA]: {node['question']}")
-    for i, option in enumerate(node['options']):
-        print(f"{i + 1}. {option['label']}")
+    print_slow(node_data['text'])
     
-    try:
-        raw_input = input("Pilih jawaban (angka): ")
-        choice = int(raw_input) - 1
-        if choice < 0 or choice >= len(node['options']):
-            print("Pilihan tidak valid, coba lagi.")
-            return traverse_tree(node, history)
-    except ValueError:
-        print("Masukkan angka saja.")
-        return traverse_tree(node, history)
+    # Tampilkan Opsi
+    options = node_data['options']
+    for idx, opt in enumerate(options, 1):
+        print(f"{idx}. {opt['label']}")
     
-    selected_option = node['options'][choice]
+    while True:
+        choice = input("\n>> Masukkan nomor pilihan Anda: ").strip()
+        if choice.isdigit():
+            idx = int(choice) - 1
+            if 0 <= idx < len(options):
+                return options[idx]['next'] 
+        print("Input salah. Masukkan nomor yang tersedia.")
+
+def show_diagnosis(disease_name, diseases_db, custom_message=None):
+    """Menampilkan hasil diagnosis"""
+    print("\n" + "#"*60)
     
-    current_step["answer"] = selected_option['label']
-    history.append(current_step) # <--- Simpan tracking
-    
-    if "result" in selected_option:
-        return selected_option["result"], history 
-    elif "next_node" in selected_option:
-        return traverse_tree(selected_option["next_node"], history)
+    if disease_name and disease_name in diseases_db:
+        print(f"🔍 HASIL DIAGNOSIS: {disease_name.upper()}")
+        print("#"*60)
+        
+        info = diseases_db[disease_name]
+        
+        print("\n🛑 PENYEBAB KEMUNGKINAN:")
+        for cause in info['causes']:
+            print(f" - {cause}")
+            
+        print("\n🤒 GEJALA KHAS:")
+        for sym in info['symptoms']:
+            print(f" - {sym}")
+            
+        print("\n💊 SARAN PENGOBATAN:")
+        for treat in info['treatment']:
+            print(f" - {treat}")
+            
     else:
-        return "Tidak diketahui", history
+        # Jika diagnosis tidak ada di database atau hasil unknown
+        print("HASIL ANALISIS:")
+        print("#"*60)
+        if custom_message:
+            print(f"\n{custom_message}")
+        else:
+            print(f"\nPenyakit '{disease_name}' belum terdaftar di database kami.")
+            
+    print("\nDISCLAIMER: Ini adalah sistem pakar bantuan.")
+    print("   Konsultasi dokter tetap disarankan.")
+    print("#"*60)
 
-# 3. FITUR PENJELASAN (XAI)
-def show_explanation(history):
-    print("\n" + "="*40)
-    print("PENJELASAN DIAGNOSA (WHY?)")
-    print("="*40)
-    print("Sistem menyimpulkan ini berdasarkan jawabanmu:")
-    for i, step in enumerate(history):
-        print(f"{i+1}. {step['question']}")
-        print(f"   --> Jawaban: {step['answer']}")
-
-# 4. TAMPILKAN DETAIL PENYAKIT
-def show_diagnosis(disease_name, diseases_data):
-    result_data = next((item for item in diseases_data if item["name"] == disease_name), None)
+def run_expert_system(tree_data, diseases_db):
+    print("\nHalo! Saya HairExpert.")
+    print("Mari kita cek kondisi rambut dan kulit kepala Anda.")
     
-    print("\n" + "="*40)
-    print(f"HASIL DIAGNOSA FINAL: {disease_name.upper()}")
-    print("="*40)
+    current_node_id = "root"
     
-    if result_data:
-        print(f"\n[PENYEBAB]:")
-        for cause in result_data['causes']:
-            print(f"- {cause}")
-        print(f"\n[GEJALA]:")
-        for sym in result_data['symptoms']:
-            print(f"- {sym}")
-        print(f"\n[PENGOBATAN]:")
-        for treat in result_data['treatment']:
-            print(f"- {treat}")
-    else:
-        print("Data detail tidak ditemukan di database.")
+    while True:
+        # Ambil data node saat ini dari JSON
+        node = tree_data['nodes'].get(current_node_id)
+        
+        if not node:
+            print(f"Error: Node '{current_node_id}' tidak ditemukan di decision tree.")
+            break
+            
+        # Cek tipe node: Apakah Pertanyaan atau Diagnosis?
+        if node['type'] == 'question':
+            # Jika pertanyaan, update current_node_id berdasarkan jawaban user
+            next_node_id = ask_question(node)
+            current_node_id = next_node_id
+            
+        elif node['type'] == 'diagnosis':
+            # Jika diagnosis, tampilkan hasil dan stop loop
+            d_name = node.get('disease_name')
+            msg = node.get('message')
+            show_diagnosis(d_name, diseases_db, msg)
+            break
 
-# --- MAIN PROGRAM ---
 if __name__ == "__main__":
-    print("--- SISTEM PAKAR HAIR EXPERT (RULE BASED) ---")
+    tree_data = load_json('decision_tree.json') 
+    diseases_db_raw = load_json('diseases.json') 
     
-    diseases_data, tree_data = load_data()
+    diseases_db = {item['name']: item for item in diseases_db_raw}
     
-    diagnosis_result, user_history = traverse_tree(tree_data)
-    
-    # Tampilkan Alasan 
-    show_explanation(user_history)
-    
-    # Tampilkan Detail Penyakit
-    show_diagnosis(diagnosis_result, diseases_data)
+    while True:
+        run_expert_system(tree_data, diseases_db)
+        
+        again = input("\nIngin diagnosa ulang? (y/n): ").lower()
+        if again != 'y':
+            break

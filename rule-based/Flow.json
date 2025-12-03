@@ -1,0 +1,86 @@
+
+1. Visual Flowchart (Mermaid)
+graph TD
+    Start["Halo! Saya HairExpert. Mari kita cek kondisi rambutmu. Apa keluhan utamanya?"]
+    
+    Start -->|"Gatal atau kulit kepala bersisik atau perih"| Q_Gatal["Coba lihat kulit kepalamu dengan cermin atau sisir"]
+    Start -->|"Rambut rontok atau kebotakan"| Q_Rontok["Bagaimana pola kerontokannya"]
+
+    %% CABANG GATAL
+    Q_Gatal --> Q_Kutu["Apakah kamu melihat ada kutu bergerak atau telur putih yang menempel kuat di rambut"]
+    Q_Kutu -->|"Ya ada kutu atau telur"| R_Pedikulosis["Diagnosis Pedikulosis Kapitis"]
+    Q_Kutu -->|"Tidak ada"| Q_Benjolan["Apakah ada bintik merah kecil atau benjolan bernanah mirip jerawat"]
+
+    Q_Benjolan -->|"Ya mirip jerawat"| R_Folliculitis["Diagnosis Folliculitis"]
+    Q_Benjolan -->|"Tidak hanya bersisik atau merah"| Q_Sisik["Perhatikan jenis sisik atau ketombe"]
+
+    Q_Sisik -->|"Sisik kuning berminyak dan menempel"| R_Seborrheic["Diagnosis Seborrheic Dermatitis"]
+    Q_Sisik -->|"Sisik putih atau perak tebal kering batas merah tegas"| Q_Kuku["Apakah kuku memiliki lekukan kecil atau kuku terlepas"]
+    Q_Kuku -->|"Ya atau mungkin"| R_Psoriasis["Diagnosis Psoriasis"]
+
+    %% CABANG RONTOK
+    Q_Rontok -->|"Botak di area tertentu Patchy"| Q_Patch["Mari lihat area botaknya"]
+    Q_Rontok -->|"Menipis merata Diffuse"| Q_Diffuse["Mari cek pemicunya"]
+
+    %% PATCHY
+    Q_Patch --> Q_Segitiga["Apakah botaknya berbentuk segitiga di pelipis dan sudah lama"]
+    Q_Segitiga -->|"Ya menetap"| R_TTA["Diagnosis Temporal Triangular Alopecia"]
+    Q_Segitiga -->|"Tidak"| Q_Cabut["Apakah kamu sering mencabut atau memelintir rambut"]
+
+    Q_Cabut -->|"Ya sering mencabut"| R_Triko["Diagnosis Trikotilomania"]
+    Q_Cabut -->|"Tidak"| Q_Licin["Apakah area botak licin bulat atau ada rambut"]
+
+    Q_Licin -->|"Ya"| R_AlopeciaAreata["Diagnosis Alopecia Areata"]
+
+    %% DIFFUSE
+    Q_Diffuse --> Q_Kemo["Apakah 1 sampai 3 minggu terakhir menjalani kemoterapi atau terkena radiasi"]
+    Q_Kemo -->|"Ya"| R_Anagen["Diagnosis Anagen Effluvium"]
+
+    Q_Kemo -->|"Tidak"| Q_Stres["Apakah 3 sampai 4 bulan lalu ada demam tinggi melahirkan diet ekstrem atau stres berat"]
+    Q_Stres -->|"Ya ada pemicu"| R_Telogen["Diagnosis Telogen Effluvium"]
+
+    Q_Stres -->|"Tidak ada pemicu"| Q_Genetik["Apakah kerontokan berjalan bertahun tahun dan pola mirip keluarga"]
+    Q_Genetik -->|"Ya mirip keluarga"| R_Andro["Diagnosis Androgenic Alopecia"]
+
+
+2. Rule Base 
+
+Rule 1: Pedikulosis Kapitis
+
+IF (Keluhan utama = Gatal) AND (Terlihat kutu hidup OR Telur putih menempel kuat di batang rambut) THEN Diagnosis = Pedikulosis Kapitis Saran: Gunakan sisir serit dan lotion permethrin.
+
+Rule 2: Folliculitis
+
+IF (Keluhan utama = Gatal/Nyeri) AND (TIDAK ada kutu) AND (Terdapat bintik merah kecil OR Benjolan bernanah seperti jerawat) THEN Diagnosis = Folliculitis Saran: Hindari bercukur sementara, jaga kebersihan, gunakan krim antibiotik.
+
+Rule 3: Seborrheic Dermatitis
+
+IF (Keluhan utama = Gatal/Ketombe) AND (Tipe sisik = Berminyak/Kekuningan) AND (Lokasi = Kulit kepala, alis, atau area berminyak) THEN Diagnosis = Seborrheic Dermatitis Saran: Gunakan shampo ketokonazol.
+
+Rule 4: Psoriasis
+
+IF (Keluhan utama = Gatal/Sisik Tebal) AND (Tipe sisik = Kering, warna perak/putih, dasar merah muda) AND (Gejala penyerta = Lekukan pada kuku/Pitting OR Plak menebal) THEN Diagnosis = Psoriasis Saran: Hindari stres, gunakan pelembap urea/salisilat, konsultasi ke dermatolog.
+
+Rule 5: Temporal Triangular Alopecia
+
+IF (Keluhan utama = Botak sebagian/Patchy) AND (Lokasi = Pelipis/Frontotemporal) AND (Bentuk = Segitiga) AND (Durasi = Sejak kecil/Lama dan menetap) THEN Diagnosis = Temporal Triangular Alopecia Saran: Ini kondisi bawaan, opsi perbaikan adalah bedah/transplantasi.
+
+Rule 6: Trikotilomania
+
+IF (Keluhan utama = Botak sebagian/Patchy) AND (Kondisi rambut = Patah tidak rata/panjang berbeda-beda) AND (Perilaku = Ada dorongan mencabut rambut saat cemas/stres) THEN Diagnosis = Trikotilomania Saran: Terapi perilaku (CBT) dan manajemen stres.
+
+Rule 7: Alopecia Areata
+
+IF (Keluhan utama = Botak sebagian/Patchy) AND (Kondisi area botak = Licin, bulat, batas tegas) AND (Gejala khas = Ada rambut tanda seru/Exclamation point hairs OR Kuku rapuh/pitting) THEN Diagnosis = Alopecia Areata Saran: Konsultasi untuk suntik steroid intralesional jika tidak membaik dalam 6 bulan.
+
+Rule 8: Anagen Effluvium
+
+IF (Keluhan utama = Rontok Merata/Diffuse) AND (Kecepatan = Sangat cepat/mendadak) AND (Pemicu = Riwayat Kemoterapi, Radiasi, atau paparan Toksin baru-baru ini) THEN Diagnosis = Anagen Effluvium Saran: Rambut biasanya tumbuh kembali setelah pengobatan selesai.
+
+Rule 9: Telogen Effluvium
+
+IF (Keluhan utama = Rontok Merata/Diffuse) AND (Timeline = Muncul 3-4 bulan SETELAH pemicu) AND (Pemicu = Demam tinggi, Melahirkan, Stres berat, Diet ketat) THEN Diagnosis = Telogen Effluvium Saran: Perbaiki nutrisi, kurangi stres, biasanya pulih sendiri.
+
+Rule 10: Androgenic Alopecia
+
+IF (Keluhan utama = Rontok Merata/Menipis) AND (Progres = Lambat/Bertahun-tahun) AND (Pola = Garis rambut mundur [Pria] OR Belahan melebar [Wanita]) AND (Faktor = Ada riwayat keluarga/Genetik) THEN Diagnosis = Androgenic Alopecia Saran: Minoxidil atau Finasteride (sesuai resep dokter).

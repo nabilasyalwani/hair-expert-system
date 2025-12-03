@@ -1,118 +1,125 @@
 {
-  "id": "root",
-  "question": "Apa keluhan utama yang paling dirasakan?",
-  "options": [
-    {
-      "label": "Gatal, Kulit Kepala Merah, atau Bersisik/Ketombe",
-      "next_node": {
-        "id": "check_kutu",
-        "question": "Apakah terlihat adanya kutu atau telur kutu pada rambut?",
-        "options": [
-          {
-            "label": "Ya",
-            "result": "Pedikulosis Kapitis"
-          },
-          {
-            "label": "Tidak",
-            "next_node": {
-              "id": "check_bintik",
-              "question": "Apakah terdapat bintik merah kecil atau benjolan bernanah seperti jerawat?",
-              "options": [
-                {
-                  "label": "Ya",
-                  "result": "Folliculitis"
-                },
-                {
-                  "label": "Tidak",
-                  "next_node": {
-                    "id": "check_sisik",
-                    "question": "Bagaimana bentuk sisik atau ketombe yang muncul?",
-                    "options": [
-                      {
-                        "label": "Sisik tebal berwarna perak dengan dasar merah (plak)",
-                        "result": "Psoriasis"
-                      },
-                      {
-                        "label": "Sisik berminyak berwarna kekuningan",
-                        "result": "Seborrheic Dermatitis"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      }
+  "nodes": {
+    "root": {
+      "text": "Apa keluhan utama yang paling mengganggu Anda saat ini?",
+      "type": "question",
+      "options": [
+        { "label": "Gatal / Kulit Kepala Bersisik / Perih / Ada Benjolan", "next": "check_kutu" },
+        { "label": "Rambut Rontok / Kebotakan / Penipisan", "next": "check_pola_rontok" }
+      ]
     },
-    {
-      "label": "Rambut Rontok atau Kebotakan",
-      "next_node": {
-        "id": "check_pola_rontok",
-        "question": "Bagaimana pola kerontokannya?",
-        "options": [
-          {
-            "label": "Botak pada area tertentu (Bercak/Patchy)",
-            "next_node": {
-              "id": "check_segitiga",
-              "question": "Apakah kebotakan berbentuk segitiga di area pelipis dan sudah ada sejak kecil/lama?",
-              "options": [
-                {
-                  "label": "Ya",
-                  "result": "Temporal Triangular Alopecia"
-                },
-                {
-                  "label": "Tidak",
-                  "next_node": {
-                    "id": "check_cabut",
-                    "question": "Apakah rambut terlihat patah tidak rata atau ada kebiasaan menarik rambut?",
-                    "options": [
-                      {
-                        "label": "Ya",
-                        "result": "Trikotilomania"
-                      },
-                      {
-                        "label": "Tidak (Botak licin bulat/oval)",
-                        "result": "Alopecia Areata"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "label": "Rontok/Menipis secara merata (Diffuse)",
-            "next_node": {
-              "id": "check_kemo",
-              "question": "Apakah ada riwayat Kemoterapi, Radiasi, atau paparan racun baru-baru ini?",
-              "options": [
-                {
-                  "label": "Ya",
-                  "result": "Anagen Effluvium"
-                },
-                {
-                  "label": "Tidak",
-                  "next_node": {
-                    "id": "check_stres_akut",
-                    "question": "Apakah kerontokan terjadi mendadak (banyak sekali) sekitar 3-4 bulan setelah stres berat, sakit, atau melahirkan?",
-                    "options": [
-                      {
-                        "label": "Ya",
-                        "result": "Telogen Effluvium"
-                      },
-                      {
-                        "label": "Tidak (Menipis perlahan/bertahap)",
-                        "result": "Androgenic Alopecia"
-                      }
-                    ]
-                  }
-                }
-              ]
-            }
-          }
-        ]
-      }
-    }
-  ]
+    "check_kutu": {
+      "text": "Coba lihat dekat cermin. Apakah Anda melihat kutu bergerak atau telur kecil putih yang MENEMPEL KUAT di batang rambut?",
+      "image_desc": "Perbedaan Ketombe (mudah jatuh) vs Telur Kutu (nempel kuat)",
+      "type": "question",
+      "options": [
+        { "label": "Ya, ada kutu/telur", "next": "diag_pedikulosis" },
+        { "label": "Tidak ada", "next": "check_benjolan" }
+      ]
+    },
+    "check_benjolan": {
+      "text": "Apakah ada bintik merah kecil atau benjolan bernanah mirip JERAWAT di area rambut yang terasa nyeri?",
+      "image_desc": "Benjolan kemerahan dengan titik putih di tengah (pustula)",
+      "type": "question",
+      "options": [
+        { "label": "Ya, mirip jerawat", "next": "diag_folliculitis" },
+        { "label": "Tidak, hanya bersisik/merah", "next": "check_tipe_sisik" }
+      ]
+    },
+    "check_tipe_sisik": {
+      "text": "Mari perhatikan jenis sisik/ketombenya. Seperti apa bentuknya?",
+      "image_desc": "Gambar Sisik Kuning Berminyak vs Sisik Perak Kering Tebal",
+      "type": "question",
+      "options": [
+        { "label": "Sisik berminyak, warna kekuningan, menempel di kulit", "next": "diag_seborrheic" },
+        { "label": "Sisik kering, tebal, warna putih perak, dasar merah", "next": "check_kuku" },
+        { "label": "Tidak yakin / Tidak bersisik", "next": "diag_unknown_skin" }
+      ]
+    },
+    "check_kuku": {
+      "text": "Untuk memastikan, coba cek kuku jari tangan Anda. Apakah ada lekukan kecil-kecil (pitting) atau kuku terlihat rusak?",
+      "image_desc": "Kuku dengan lubang-lubang kecil (pitting nail)",
+      "type": "question",
+      "options": [
+        { "label": "Ya, ada kelainan kuku", "next": "diag_psoriasis" },
+        { "label": "Tidak, kuku normal", "next": "diag_psoriasis_suspect" }
+      ]
+    },
+    "check_pola_rontok": {
+      "text": "Bagaimana pola kerontokannya?",
+      "image_desc": "Gambar Pola Patchy (Kiri) vs Diffuse (Kanan)",
+      "type": "question",
+      "options": [
+        { "label": "Botak di area tertentu (Patchy/Bulat/Pitak)", "next": "check_segitiga" },
+        { "label": "Rontok/Menipis merata di seluruh kepala (Diffuse)", "next": "check_kemo" }
+      ]
+    },
+    "check_segitiga": {
+      "text": "Apakah area botak berbentuk SEGITIGA di pelipis wajah dan sudah ada sejak kecil/lama?",
+      "image_desc": "Kebotakan bentuk segitiga di samping dahi",
+      "type": "question",
+      "options": [
+        { "label": "Ya, menetap sejak lama", "next": "diag_tta" },
+        { "label": "Tidak", "next": "check_cabut" }
+      ]
+    },
+    "check_cabut": {
+      "text": "Apakah Anda sering merasa cemas lalu tanpa sadar mencabut rambut? Atau rambut di area botak patah tidak rata?",
+      "image_desc": "Rambut patah dengan panjang berbeda-beda",
+      "type": "question",
+      "options": [
+        { "label": "Ya, sering mencabut", "next": "diag_triko" },
+        { "label": "Tidak", "next": "check_licin" }
+      ]
+    },
+    "check_licin": {
+      "text": "Apakah area botak teraba LICIN (seperti kulit biasa), berbentuk bulat, atau ada rambut pangkal kecil (tanda seru)?",
+      "image_desc": "Area botak licin bulat koin & Exclamation mark hair",
+      "type": "question",
+      "options": [
+        { "label": "Ya, licin/bulat", "next": "diag_aa" },
+        { "label": "Tidak yakin", "next": "diag_unknown_patchy" }
+      ]
+    },
+    "check_kemo": {
+      "text": "Apakah dalam 1-3 minggu terakhir Anda menjalani KEMOTERAPI, radiasi, atau terkena paparan racun?",
+      "type": "question",
+      "options": [
+        { "label": "Ya", "next": "diag_anagen" },
+        { "label": "Tidak", "next": "check_stres" }
+      ]
+    },
+    "check_stres": {
+      "text": "Ingat-ingat 3-4 bulan yang lalu. Apakah Anda sempat demam tinggi, melahirkan, diet ekstrem, atau stres berat?",
+      "image_desc": "Garis waktu: Pemicu terjadi 3 bulan sebelum rontok",
+      "type": "question",
+      "options": [
+        { "label": "Ya, ada kejadian tersebut", "next": "diag_telogen" },
+        { "label": "Tidak", "next": "check_genetik" }
+      ]
+    },
+    "check_genetik": {
+      "text": "Apakah kerontokan berjalan lambat (bertahun-tahun) dan ada riwayat keluarga (ayah/ibu juga botak)?",
+      "image_desc": "Pola M-Shape pada Pria atau Pelebaran belahan rambut pada Wanita",
+      "type": "question",
+      "options": [
+        { "label": "Ya", "next": "diag_andro" },
+        { "label": "Tidak", "next": "diag_unknown_diffuse" }
+      ]
+    },
+    "diag_pedikulosis": { "type": "diagnosis", "disease_name": "Pedikulosis Kapitis" },
+    "diag_folliculitis": { "type": "diagnosis", "disease_name": "Folliculitis" },
+    "diag_seborrheic": { "type": "diagnosis", "disease_name": "Seborrheic Dermatitis" },
+    "diag_psoriasis": { "type": "diagnosis", "disease_name": "Psoriasis" },
+    "diag_psoriasis_suspect": { "type": "diagnosis", "disease_name": "Psoriasis" },
+    "diag_tta": { "type": "diagnosis", "disease_name": "Temporal Triangular Alopecia" },
+    "diag_triko": { "type": "diagnosis", "disease_name": "Trikotilomania" },
+    "diag_aa": { "type": "diagnosis", "disease_name": "Alopecia Areata" },
+    "diag_anagen": { "type": "diagnosis", "disease_name": "Anagen Effluvium" },
+    "diag_telogen": { "type": "diagnosis", "disease_name": "Telogen Effluvium" },
+    "diag_andro": { "type": "diagnosis", "disease_name": "Androgenic Alopecia" },
+    "diag_unknown_skin": { "type": "diagnosis", "disease_name": null, "message": "Gejala kulit tidak spesifik. Segera konsultasi ke Dokter Kulit (SpKK)." },
+    "diag_unknown_patchy": { "type": "diagnosis", "disease_name": null, "message": "Pola kebotakan patchy tidak dikenali dalam sistem. Silakan ke dokter." },
+    "diag_unknown_diffuse": { "type": "diagnosis", "disease_name": null, "message": "Kerontokan merata tanpa pemicu jelas. Perlu cek lab (tiroid/zat besi)." }
+  }
 }
