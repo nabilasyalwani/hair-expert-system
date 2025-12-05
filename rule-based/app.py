@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import json
+import uvicorn
 
 app = FastAPI()
 
@@ -48,20 +49,24 @@ def get_diagnosis_details(disease_name: str):
     if info:
         return {
             "name": disease_name,
+            "description": info["description"],
             "causes": info["causes"],
             "symptoms": info["symptoms"],
             "treatment": info["treatment"],
+            "reference": info["reference"],
             "message": info.get("message", "")
         }
     else:
         return {
             "name": disease_name,
+            "description": "",
             "causes": [],
             "symptoms": [],
             "treatment": [],
-            "message": f"Penyakit '{disease_name}' belum terdaftar."
+            "reference": [],
+            "message": ""
         }
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    uvicorn.run("app:app", host="0.0.0.0", port=8000, reload=True)
 

@@ -64,6 +64,11 @@ def show_diagnosis(disease_name, diseases_db, custom_message=None):
         print("\n💊 SARAN PENGOBATAN:")
         for treat in info['treatment']:
             print(f" - {treat}")
+
+        if 'reference' in info and info['reference']:
+            print("\n📚 REFERENSI:")
+            for ref in info['reference']:
+                print(f" - {ref}")
             
     else:
         # Jika diagnosis tidak ada di database atau hasil unknown
