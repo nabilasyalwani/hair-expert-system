@@ -21,7 +21,7 @@ git clone -b backend https://github.com/nabilasyalwani/hair-expert-system.git ba
 ```
 cd backend-hair-expert
 pip install -r requirements.txt
-uvicorn app:app --host 0.0.0.0 --port 8000 --reload
+python app.py
 ```
 
 - Server akan berjalan pada localhost port 8000
