@@ -59,8 +59,8 @@ export default function Home() {
               Video Demo
               <VideoCameraIcon className="w-5 h-5 ml-2" />
             </button> */}
-            <a 
-              href="https://youtu.be/p8Gux5rmRbg" 
+            <a
+              href="https://youtu.be/p8Gux5rmRbg"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-pointer flex items-center justify-center 
@@ -69,8 +69,8 @@ export default function Home() {
                          hover:bg-[#bd5ee6] hover:text-white hover:-translate-y-1 
                          transition-all duration-300"
             >
-                Video Demo
-                <VideoCameraIcon className="w-5 h-5 ml-2" />
+              Video Demo
+              <VideoCameraIcon className="w-5 h-5 ml-2" />
             </a>
           </div>
         </main>

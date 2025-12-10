@@ -34,7 +34,7 @@ export default function Test() {
     const fetchNode = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8000/question/${currentNode}`
+          `https://hair-expert-system-production.up.railway.app/question/${currentNode}`
         );
         const data: NodeData = await res.json();
         setNodeData(data);
@@ -127,9 +127,9 @@ export default function Test() {
                 {opt.image_url && (
                   <div className="mb-4 flex justify-center">
                     <img
-                        src={opt.image_url}
-                        alt={opt.label}
-                        className="mb-2 max-h-24 w-auto object-contain rounded-md shadow-sm"
+                      src={opt.image_url}
+                      alt={opt.label}
+                      className="mb-2 max-h-24 w-auto object-contain rounded-md shadow-sm"
                     />
                   </div>
                 )}

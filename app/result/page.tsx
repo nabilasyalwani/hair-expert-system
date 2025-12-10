@@ -35,7 +35,7 @@ export default function Result() {
     const fetchDetails = async () => {
       try {
         const res = await fetch(
-          `http://localhost:8000/diagnosis_details/${disease_name}`
+          `https://hair-expert-system-production.up.railway.app/diagnosis_details/${disease_name}`
         );
         const djson: DiagnosisDetail = await res.json();
         if (!cancelled) {
@@ -82,11 +82,12 @@ export default function Result() {
                     z-30 w-fit mx-auto mt-6 text-2xl sm:text-xl lg:text-5xl font-bold bg-white border-4 sm:border-6 border-[#F6E6FC] 
                     hover:bg-[#F6E6FC] hover:border-white text-[#413D6C] 
                     px-8 sm:px-12 py-3 sm:py-6 rounded-full shadow-lg transition-all
-                    sm:translate-x-0">
+                    sm:translate-x-0"
+        >
           TEST RESULT
         </div>
       </div>
-      
+
       <div className="flex-grow">
         <div className="flex flex-col mx-auto max-w-4xl">
           <div className="text-left text-[#413D6C] z-20 mt-50 lg:mt-55 max-w-4xl p-6">
@@ -119,16 +120,25 @@ export default function Result() {
 
         <div className="w-full relative z-40 mt-10">
           <div className="flex flex-col mx-auto max-w-4xl px-4">
-              <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg shadow-md mb-8" role="alert">
-                  <p className="font-bold">⚠️ Perhatian Penting: Diagnosis Dugaan</p>
-                  <p className="text-sm mt-1">
-                      Hasil diagnosis dari HairExpert System <span className="font-bold">hanyalah dugaan awal</span> berdasarkan data yang Anda berikan. 
-                      Sistem ini bukanlah pengganti konsultasi medis. Anda <span className="font-bold">wajib</span> berkonsultasi langsung dengan dokter kulit atau spesialis rambut untuk diagnosis dan penanganan yang akurat.
-                  </p>
-              </div>
+            <div
+              className="bg-red-100 border-l-4 border-red-500 text-red-700 p-4 rounded-lg shadow-md mb-8"
+              role="alert"
+            >
+              <p className="font-bold">
+                ⚠️ Perhatian Penting: Diagnosis Dugaan
+              </p>
+              <p className="text-sm mt-1">
+                Hasil diagnosis dari HairExpert System{" "}
+                <span className="font-bold">hanyalah dugaan awal</span>{" "}
+                berdasarkan data yang Anda berikan. Sistem ini bukanlah
+                pengganti konsultasi medis. Anda{" "}
+                <span className="font-bold">wajib</span> berkonsultasi langsung
+                dengan dokter kulit atau spesialis rambut untuk diagnosis dan
+                penanganan yang akurat.
+              </p>
+            </div>
           </div>
         </div>
-      
 
         {diagnosisDetails.name !== "null" && (
           <>
