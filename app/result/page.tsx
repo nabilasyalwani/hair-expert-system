@@ -1,5 +1,6 @@
 "use client";
-import { use, useEffect, useState } from "react";
+export const dynamic = "force-dynamic";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { useSearchParams } from "next/navigation";
 import { ArrowLeftIcon } from "@heroicons/react/24/solid";
