@@ -1,0 +1,33 @@
+{
+  "name": "Alopecia Areata",
+  "category": "rontok",
+  "cause": [
+    "Genetik",
+    "Epigenetik (perubahan metilasi DNA dan asetilasi histon)",
+    "Stres psikologis → peningkatan kortisol → inflamasi",
+    "Faktor diet / pola makan memengaruhi sistem imun (misal minyak kedelai tinggi)",
+    "Penyakit autoimun kompleks"
+  ],
+  "symptoms": [
+    "Kerontokan rambut patch dengan batas tegas",
+    "Rambut tanda seru (exclamation point hairs) di tepi area rontok",
+    "Rambut distrofik dan yellow dots terlihat pada trichoscopy",
+    "Kelainan kuku: pitting, rapuh, garis halus",
+    "Pria: gejala awal terlihat di area janggut"
+  ],
+  "diagnosis": [
+    "Patch kerontokan tanpa jaringan parut (nonscarring)",
+    "Trichoscopy: yellow dots dan rambut distrofik",
+    "Riwayat keluarga positif Alopecia Areata",
+    "Inflamasi ringan, bisa meluas",
+    "Histopatologi: inflamasi ringan tanpa kerusakan jaringan",
+    "Aktivasi sel T sitotoksik dan perubahan epigenetik folikel rambut"
+  ],
+  "treatment": [
+    "Intralesional corticosteroid (ILC): triamcinolone acetonide (5 mg/mL kulit kepala, 2.5 mg/mL wajah/alas)",
+    "Hentikan terapi jika tidak ada perbaikan dalam 6 bulan",
+    "Alternatif: topikal corticosteroid, minoxidil",
+    "Manajemen stres dan gaya hidup sehat (diet seimbang)",
+    "Pantau respons dan konsultasi ke dokter kulit sesuai kondisi pasien"
+  ]
+}

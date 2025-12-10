@@ -1,0 +1,33 @@
+{
+  "name": "Androgenic Alopecia",
+  "category": "rontok",
+  "cause": [
+    "Sensitivitas folikel terhadap DHT",
+    "Faktor genetik / riwayat keluarga",
+    "Perubahan siklus rambut: anagen memendek, telogen memanjang",
+    "Faktor pendukung: merokok, sindrom metabolik",
+    "Hormon: peningkatan sensitivitas DHT"
+  ],
+  "symptoms": [
+    "Kerontokan progresif",
+    "Miniaturisasi rambut (pendek, tipis, kurang pigmen)",
+    "Pria: garis rambut mundur, penipisan vertex, kebotakan meluas",
+    "Wanita: pola Christmas tree, penipisan frontoparietal tanpa mundurnya garis rambut frontal",
+    "Kadang disertai gatal atau nyeri kulit kepala"
+  ],
+  "diagnosis": [
+    "Pola kebotakan khas sesuai gender (Hamilton-Norwood untuk pria, Christmas tree untuk wanita)",
+    "Trichoscopy: variasi diameter rambut",
+    "Riwayat keluarga positif",
+    "Perjalanan progresif bertahun-tahun",
+    "Evaluasi klinis",
+    "Tidak ada tes laboratorium spesifik"
+  ],
+  "treatment": [
+    "Finasteride 1 mg",
+    "Minoxidil 2-5%",
+    "LLLT (low level laser therapy)",
+    "PRP therapy",
+    "Terapi tambahan: LLLT/PRP untuk memicu pertumbuhan rambut (efektivitas bervariasi)"
+  ]
+}

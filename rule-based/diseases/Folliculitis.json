@@ -1,0 +1,33 @@
+{
+  "name": "Folliculitis",
+  "category": "rontok, peradangan",
+  "cause": [
+    "Sering bercukur atau waxing",
+    "Folikel tersumbat akibat produk riasan atau keringat",
+    "Kontak tangan kotor",
+    "Infeksi bakteri pada folikel rambut",
+    "Cedera pada folikel rambut",
+    "Penggunaan pakaian / bahan yang mengiritasi kulit"
+  ],
+  "symptoms": [
+    "Rambut rontok di area terkena",
+    "Bintik merah kecil seperti jerawat",
+    "Benjolan berisi nanah yang membesar atau pecah",
+    "Gatal, nyeri, panas, atau perih pada area terkena"
+  ],
+  "diagnosis": [
+    "Peradangan folikel rambut akibat infeksi bakteri atau sumbatan",
+    "Observasi gejala dan area yang terkena",
+    "Riwayat kebiasaan seperti bercukur",
+    "Pengecekan untuk menentukan penyebab: bakteri atau jamur"
+  ],
+  "treatment": [
+    "Hindari bercukur berlebihan",
+    "Cuci area dengan sabun antibakteri dan air hangat",
+    "Jangan menggaruk atau menyentuh area dengan tangan kotor",
+    "Gunakan krim antibiotik atau topikal",
+    "Kompres dengan air garam bersih",
+    "Obat antijamur jika penyebab jamur",
+    "Konsultasi dokter jika tidak membaik"
+  ]
+}
