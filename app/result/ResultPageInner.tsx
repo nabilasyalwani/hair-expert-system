@@ -42,7 +42,17 @@ export default function ResultPage() {
           setDiagnosisDetails(djson);
         }
       } catch (err) {
-        console.error("Fetch error:", err);
+        try {
+          let res = await fetch(
+            `http://localhost:8000/diagnosis_details/${disease_name}`
+          );
+          const djson: DiagnosisDetail = await res.json();
+          if (!cancelled) {
+            setDiagnosisDetails(djson);
+          }
+        } catch (err) {
+          console.error("Failed to fetch diagnosis details:", err);
+        }
       }
     };
     fetchDetails();

@@ -39,7 +39,15 @@ export default function Test() {
         const data: NodeData = await res.json();
         setNodeData(data);
       } catch (err) {
-        console.error("Fetch error:", err);
+        try {
+          let res = await fetch(
+            `http://localhost:8000/question/${currentNode}`
+          );
+          const data: NodeData = await res.json();
+          setNodeData(data);
+        } catch (err) {
+          console.error("Fetch error:", err);
+        }
       }
     };
 
