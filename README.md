@@ -121,17 +121,24 @@ Penjelasan ini langsung merujuk pada aturan IF–THEN yang digunakan oleh sistem
 
 ### Landing Page
 
+<img width="2846" height="1464" alt="Screenshot 2025-12-23 101109" src="https://github.com/user-attachments/assets/1d4bf887-8f9b-45c3-8b01-425c238be518" />
+
 - Deskripsi singkat sistem
 - Tombol **Mulai Test**
 - Tombol **Video Demo**
 
 ### Halaman Test (Diagnosis)
 
+<img width="2847" height="1473" alt="Screenshot 2025-12-23 101122" src="https://github.com/user-attachments/assets/1dba3206-457c-4d3b-ad1b-5944eb98d3e2" />
+
 - Pertanyaan ditampilkan satu per satu
 - Jawaban berupa tombol (Ya/Tidak, Gatal/Rontok, dll.)
 - Alur mengikuti decision tree
 
 ### Halaman Hasil
+<img width="2848" height="1467" alt="Screenshot 2025-12-23 101144" src="https://github.com/user-attachments/assets/1479fcee-e40e-4f99-b366-e5ed115d5012" />
+<img width="2846" height="1465" alt="Screenshot 2025-12-23 101205" src="https://github.com/user-attachments/assets/cee071a8-11f5-4c55-9620-8112f5e04548" />
+<img width="2844" height="1466" alt="image" src="https://github.com/user-attachments/assets/2334c151-0da4-45c1-8738-5e1babd97480" />
 
 - Menampilkan hasil diagnosis
 - Disertai **penafian medis (disclaimer)**
